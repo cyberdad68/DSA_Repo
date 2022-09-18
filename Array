@@ -1,1 +1,19 @@
-
+#include <iostream>
+using namespace std;
+#include <climits>
+void max(int arr[],int n){
+    int temp=INT_MIN;
+    for(int i=0;i<n;i++){
+        if(arr[i]>temp){
+            temp=arr[i];
+        }
+    }
+    cout<<temp;
+}
+int main() {
+    // Write C++ code here
+    int arr[]={1,2,54,4};
+    max(arr,4);
+    
+    return 0;
+}
