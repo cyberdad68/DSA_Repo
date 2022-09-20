@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int maxsubarray(int arr[],int n){
+    int ans=INT_MIN;
+    int maxi=0;
+    for(int i=0;i<n;i++){
+        maxi+=arr[i];
+        ans=max(maxi,ans);
+        if(maxi<0){
+            maxi=0;
+        }
+    }
+    return ans;
+}
+int main() {
+    int arr[]={-2,-3,4,-1,-2,1,5,-3};
+    cout<<maxsubarray(arr,8);
+
+    return 0;
+}
