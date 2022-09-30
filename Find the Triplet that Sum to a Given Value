@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+void apair(int arr[],int n,int target){
+    int i=0,j=n-1;
+    for(int k=0;k<n;k++){
+        int newtarget=target-arr[k];
+        while(i<j){
+            if(arr[i]+arr[j]==newtarget){
+                cout<<arr[k]<<arr[i]<<arr[j]<<endl;
+                break;
+            }
+            else if(arr[i]+arr[j]<newtarget){
+                i++;
+            }
+            else{
+                j--;
+            }
+        
+        }
+    }
+    
+}
+int main() {
+    int arr[]={1,2,4,5,6,7,8};
+    apair(arr,7,10);
+return 0;
+}
