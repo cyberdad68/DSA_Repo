@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+void spiral(int arr[],int n){
+    int startrow=0,startcol=0,endrow=n,endcol=n;
+    int total=n*n;
+    while(total--){
+        for(int i=startcol;i<endcol;i++){
+            cout<<arr[startrow][i];
+            startrow++;
+        }
+        for(int i=startrow;i<endrow;i++){
+            cout<<arr[i][endcol];
+            endcol--;
+        }
+        for(int i=endcol;i<startcol;i++){
+            cout<<arr[endrow][i];
+            endrow--;
+        }
+        for(int i=endrow;i<startrow;i++){
+            cout<<arr[i][startcol];
+            startcol++;
+        }
+    }
+}
+
+int main() {
+    int arr[]={1,2,3,4,5,6,7,8,9};
+    spiral(arr,9);
+    return 0;
+}
