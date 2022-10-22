@@ -6,7 +6,7 @@ int firstOccurence(int arr[],int n,int target){
         int mid=start+(end-start)/2;
         if(arr[mid]==target){
              ans=mid;
-             end=mid-1;
+             end=mid-1; //start=mid+1 (In case of Last Occurence)
         }
         else if(arr[mid]>target){
             start=mid+1;
