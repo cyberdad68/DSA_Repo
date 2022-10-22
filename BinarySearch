@@ -13,8 +13,8 @@ int binarysearch(int arr[],int n,int target){
         else{
             end=mid-1;
         }
-    return -1;
     }
+    return -1;
 }
 int main(){
     int arr[]={1,2,3,4,5,6,7,8};
